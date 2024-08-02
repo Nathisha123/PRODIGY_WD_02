@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+   box-sizing: border-box;
+    color:white;
+
+}
+
+ body {
+        background: url(https://images.pexels.com/photos/8533218/pexels-photo-8533218.jpeg?auto=compress&cs=tinysrgb&w=600);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+#head
+{
+    padding:20px;
+    text-align: center;
+}
+
+.main{
+    
+    background: url(https://images.pexels.com/photos/5698395/pexels-photo-5698395.jpeg?auto=compress&cs=tinysrgb&w=600); 
+    background-repeat :no-repeat;
+    background-size:cover ;
+    width: 500px;
+    height: 600px;
+    border-radius: 20px;
+    position: absolute; /* Ensure .main has a position other than static */
+    top:100px;
+    left:600px;
+}
+
+.container{
+    position: relative; /* Ensure .container has a position other than static */
+    margin: 100px 50px;
+    padding: 50px;
+    
+    }
+
+.display{
+   display: flex;
+   justify-content: center;
+   padding: 15px;
+   font-size: 1.5em;
+  }
+
+.buttons
+{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+ 
+}
+
+.btn{
+    padding: 15px 25px;
+    margin: 0 10px;
+    cursor:pointer;
+    border-color:antiquewhite;
+    border-radius: 10px;
+    color: black;
+    background-color: antiquewhite;
+   }
+
+.btn:hover
+{
+    background-color:burlywood;
+}
+.text {
+    margin: 0 5px;
+    font-size: 20px;
+    margin-top: 20px ;
+}
+
+.timer {
+    margin: 0 2px;
+    font-size: 40px; 
+   
+}
+
+.text:not(:last-child)::after {
+    content: ':';
+}
+
+
+/* Media Queries */
+
+/* Adjust styles for tablets and smaller devices */
+@media (max-width: 768px) {
+    .main {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: 90%; /* Adjust max-width for responsiveness */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .container {
+        margin: 50px auto; /* Center align .container */
+        padding: 30px; /* Adjust padding for smaller screens */
+    }
+
+    .display {
+        font-size: 1.2em; /* Decrease font size for smaller screens */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Decrease button padding for smaller screens */
+        margin: 0 5px; /* Reduce button margin for smaller screens */
+        font-size: 0.8em; /* Decrease button font size for smaller screens */
+    }
+
+    .text {
+        font-size: 16px; /* Decrease text font size for smaller screens */
+        text-align: center; /* Center align text */
+    }
+
+    .timer {
+        font-size: 30px; /* Decrease timer font size for smaller screens */
+    }
+    body{
+        height: 100vh;
+    }
+    
+}
+
+/* Adjust styles for screens between 768px and 1920px */
+@media (min-width: 768px)  {
+    .main {
+        max-width: 70%; /* Adjust max-width for responsiveness */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .container {
+        margin: 100px auto; /* Center align .container */
+    }
+   
+}
+
+/* Adjust styles for phones in portrait mode */
+@media (max-width: 480px) {
+    #head {
+        margin-left: 0; /* Reset margin-left for smaller screens */
+    }
+
+    .main {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: 90%; /* Adjust max-width for responsiveness */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .container {
+        margin: 50px auto; /* Center align .container */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .display {
+        display: block; /* Ensure the display items stack vertically */
+        font-size: 1em; /* Further decrease font size for smaller screens */
+    }
+
+    .btn {
+        display: block; /* Ensure buttons stack vertically */
+        padding: 10px 20px; /* Decrease button padding for smaller screens */
+        margin: 10px auto; /* Center align buttons */
+        font-size: 0.8em; /* Decrease button font size for smaller screens */
+    }
+
+    .text {
+        font-size: 14px; /* Decrease text font size for smaller screens */
+        text-align: center; /* Center align text */
+    }
+
+    .timer {
+        font-size: 20px; /* Decrease timer font size for smaller screens */
+    }
+}
